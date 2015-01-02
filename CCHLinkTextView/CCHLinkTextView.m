@@ -194,12 +194,6 @@ NSString *const CCHLinkAttributeName = @"CCHLinkAttributeName";
     return self.linkGestureRecognizer.allowableMovement;
 }
 
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
-{
-    BOOL linkFound = [self enumerateLinkRangesContainingLocation:point usingBlock:NULL];
-    return linkFound;
-}
-
 #pragma mark Gesture recognition
 
 - (void)linkAction:(CCHLinkGestureRecognizer *)recognizer
